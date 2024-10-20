@@ -1,6 +1,6 @@
 {
   "name": "@8columns/start-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Open URL of selected application in Google Chrome",
   "main": "index.js",
   "type": "module",

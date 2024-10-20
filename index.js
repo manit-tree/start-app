@@ -32,11 +32,13 @@ let autoComplete = new AutoComplete({
 })
 
 autoComplete.run().then(selection => {
-  let url = 'https://' + selection;
+  if (selection) {
+    let url = 'https://' + selection;
 
-  if (process.argv && process.argv.length >= 3) {
-      url = process.argv[2];
+    if (process.argv && process.argv.length >= 3) {
+        url = process.argv[2];
+    }
+
+    exec('chrome.exe --start-maximized --app=' + url);
   }
-
-  exec('chrome.exe --start-maximized --app=' + url);
 })
