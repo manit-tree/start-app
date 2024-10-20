@@ -1,0 +1,19 @@
+{
+  "name": "@8columns/start-app",
+  "version": "1.0.1",
+  "description": "Open URL of selected application in Google Chrome",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@8columns/prompt-autocompletion": "github:manit-tree/prompt-autocompletion"
+  },
+  "bin": {
+    "start-app":"index.js"
+  }
+}
