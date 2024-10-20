@@ -3,8 +3,13 @@
 import AutoComplete from '@8columns/prompt-autocompletion';
 import { exec } from 'child_process';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-let urls = JSON.parse(fs.readFileSync('./urls.json', {encoding:'utf8'}));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+let urls = JSON.parse(fs.readFileSync(__dirname + '/urls.json', {encoding:'utf8'}));
 
 function searchURLs(answers, input) {
   return new Promise(function(resolve) {
